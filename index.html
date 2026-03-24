@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Temperature Meter</title>
+	<link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+	<div id='box'>
+		<h2>Temperature</h2>
+		<span id='temperature-display'>~</span>
+		<spna id='location-display'>~~~~~</spna>
+		<p>Celcius</p>
+		<button onclick="GetTemperature()">Refresh</button>
+		<div id='input-box'>
+			<input id='latitude' type='number' class='input' placeholder='Latitude'>
+			<input id='longitude' type='number' class='input' placeholder='Longitude'>
+		</div>
+	</div>
+	
+	<script src='script.js'></script>
+</body>
+
+</html>
