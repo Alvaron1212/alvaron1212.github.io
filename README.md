@@ -1,2 +1,13 @@
-# Temperature-Checker-Web
-Simple Temperature Checker Web :D
+# Temperature-Checher-Web
+
+Simple weather app using API
+
+## Features
+- Input latitude & longitude
+- Show temperature
+- Show location
+
+## Tech
+- HTML
+- CSS
+- JavaScript
