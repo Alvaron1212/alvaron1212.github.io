@@ -53,14 +53,19 @@ span {
   font-size: 12vh;
 }
 
-p {
+#Unit {
   top: 55%;
   left: 50%;
   transform: translate(-50%,-55%);
   position: absolute;
   
   font-size: 2vh;
-  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+  
+  border: rgba(0,0,0,0);
+  
+  background-color: rgba(0,0,0,0);
 }
 
 #input-box {
@@ -80,7 +85,7 @@ p {
   border-radius: 25vh;
   text-align: center;
   font-family: monospace;
-  width: 14vh;
+  width: 20vh;
   height: 2vh;
 }
 
