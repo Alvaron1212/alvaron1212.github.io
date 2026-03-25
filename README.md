@@ -3,9 +3,10 @@
 Simple weather app using API, made by 13 years old.
 
 ## Features
-- Input latitude & longitude
-- Show temperature
-- Show location
+- City Input
+- Change Between Celcius, Farenheit, And Reamur 
+- Show Temperature
+- Show Location
 
 ## Tech
 - HTML
