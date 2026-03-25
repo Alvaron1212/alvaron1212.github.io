@@ -13,15 +13,16 @@
 		<h2>Temperature</h2>
 		<span id='temperature-display'>~</span>
 		<spna id='location-display'>~~~~~</spna>
-		<p>Celcius</p>
+		<select id='Unit'>
+			<option value='C'>Celcius</option>
+			<option value='F'>Farenheit</option>
+			<option value='R'>Reamur</option>
+		</select>
 		<button onclick="GetTemperature()">Refresh</button>
 		<div id='input-box'>
-			<input id='latitude' type='number' class='input' placeholder='Latitude'>
-			<input id='longitude' type='number' class='input' placeholder='Longitude'>
+			<input type='text' class='input' id='Input' placeholder='Enter Location'>
 		</div>
 	</div>
-	
 	<script src='script.js'></script>
 </body>
-
 </html>
