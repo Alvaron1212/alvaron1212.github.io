@@ -41,7 +41,13 @@ button {
   color: white;
   font-weight: bold;
   
-  transition: 300ms;
+  transition: 0.3s ease;
+}
+
+button:active {
+  transition: 0.3s ease;
+  
+  padding: 0.5vh;
 }
 
 span {
