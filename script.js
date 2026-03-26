@@ -40,7 +40,7 @@ async function GetTemperature(){
     };
     
     if (!Location){
-      LocationDisplay.textContent = 'Please Enter Location Firsi!';
+      LocationDisplay.textContent = 'Please Enter Location First!';
       return
     };
     
