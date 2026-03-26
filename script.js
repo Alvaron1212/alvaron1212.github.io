@@ -14,22 +14,35 @@ function Calc(c, unit){
   return c;
 };
 
+function getColor(c) {
+  let r = Math.min(255, c * 8);
+  let b = Math.max(0, 255 - c * 8);
+  let g = 100;
+  
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 async function GetTemperature(){
   // Data
   const Unit = UnitInput.value;
   let Location = LocationInput.value;
-  LocationDisplay.textContent = '~~~~~';
-  TemperatureDisplay.textContent = '~';
+  LocationDisplay.textContent = 'Getting Location And Temperature...';
+  TemperatureDisplay.textContent = '~~';
   
   // Fetch
   try {
     let GeoAPI = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${Location}`);
     let GeoData = await GeoAPI.json();
     
-    if (!GeoData.results){
-      LocationDisplay.textContent = 'Unknown';
+    if (!GeoData.results && Location){
+      LocationDisplay.textContent = 'No Data!';
       return
-    }
+    };
+    
+    if (!Location){
+      LocationDisplay.textContent = 'Please Enter Location Firsi!';
+      return
+    };
     
     const Place = GeoData.results[0];
     
@@ -41,6 +54,7 @@ async function GetTemperature(){
     
     // Displayer
     TemperatureDisplay.textContent = TempFinal;
+    TemperatureDisplay.style.color = getColor(Temp)
     
     const PlaceList = [
       Place.country,
@@ -54,7 +68,13 @@ async function GetTemperature(){
     LocationDisplay.textContent = 'Error!'
   }
 }
-
+//// Event HTML ////
 UnitInput.addEventListener('change', () => {
   GetTemperature();
-})
+});
+
+LocationInput.addEventListener('keydown', (k) => {
+  if (k.key === 'Enter'){
+    GetTemperature();
+  };
+});
